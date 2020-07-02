@@ -1,4 +1,4 @@
-hello.o
-hello.bc
-hello.s
-hello.llvm
+*.o
+*.bc
+*.s
+*.llvm
