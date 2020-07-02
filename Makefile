@@ -1,8 +1,11 @@
 SUBDIRS := $(wildcard */.)
 
 all: $(SUBDIRS)
+	for d in $(SUBDIRS); do \
+		$(MAKE) -C $${d}; \
+	done
 
-$(SUBDIRS):
-	$(MAKE) -C $@
-
-.PHONY: all $(SUBDIRS)
+clean: $(SUBDIRS)
+	for d in $(SUBDIRS); do \
+		$(MAKE) -C $${d} clean; \
+	done

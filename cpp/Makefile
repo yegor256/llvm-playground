@@ -5,3 +5,6 @@ all:
 	/usr/local/opt/llvm/bin/llc -o fibo.s fibo.bc
 	# See https://stackoverflow.com/a/3315236/187141
 	as fibo.s -o fibo.o
+
+clean:
+	rm -rf *.o *.llvm *.s *.bc
