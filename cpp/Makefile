@@ -1,8 +1,7 @@
 all:
 	# See https://llvm.org/docs/GettingStarted.html#example-with-clang
-	clang hello.cpp -S -emit-llvm -o - -O3 > hello.llvm
-	/usr/local/opt/llvm/bin/llvm-as -o hello.bc hello.llvm
-	/usr/local/opt/llvm/bin/llc -o hello.s hello.bc
+	clang fibo.cpp -S -emit-llvm -o - -O3 > fibo.llvm
+	/usr/local/opt/llvm/bin/llvm-as -o fibo.bc fibo.llvm
+	/usr/local/opt/llvm/bin/llc -o fibo.s fibo.bc
 	# See https://stackoverflow.com/a/3315236/187141
-	as hello.s -o hello.o
-
+	as fibo.s -o fibo.o

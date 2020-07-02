@@ -1,2 +1,2 @@
 all:
-	javac Hello.java
+	javac Fibo.java
