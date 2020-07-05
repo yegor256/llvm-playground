@@ -6,4 +6,3 @@ class Fibo {
     return this.f(n - 1) + this.f(n - 2);
   }
 }
-
